@@ -1,0 +1,20 @@
+#Name: bpRNA_PDB_34
+#Length: ,36,
+#PageNumber: 2
+#Warning: Structure contains linked PK-segments of same sizes 6 and 6. Using PK brackets for the more 5' segment
+GCGGCCAGCUCCAGGCCGCCAAACAAUAUGGAGCAC
+[[[[[[.((((((]]]]]].........))))))..
+EEEEEEESSSSSSHHHHHHHHHHHHHHHSSSSSSEE
+KKKKKKNNNNNNNKKKKKKNNNNNNNNNNNNNNNNN
+S1 8..13 "GCUCCA" 29..34 "UGGAGC"
+H1 14..28 "GGCCGCCAAACAAUA" (13,29) A:U PK{1}
+E1 1..7 "GCGGCCA" PK{1}
+E2 35..36 "AC" 
+PK1 6bp 1..6 14..19 E1 1..7 H1 14..28
+PK1.1 1 G 19 C
+PK1.2 2 C 18 G
+PK1.3 3 G 17 C
+PK1.4 4 G 16 C
+PK1.5 5 C 15 G
+PK1.6 6 C 14 G
+segment1 6bp 8..13 GCUCCA 29..34 UGGAGC

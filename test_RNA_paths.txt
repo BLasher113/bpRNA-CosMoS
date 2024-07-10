@@ -1,0 +1,3 @@
+test_RNAs/bpRNA_PDB_134.st
+test_RNAs/bpRNA_PDB_10.dbn
+test_RNAs/bpRNA_PDB_34.st
