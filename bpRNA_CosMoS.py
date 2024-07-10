@@ -42,6 +42,13 @@ def edit_ss_array(ss, dotbracket):
             ss_edit += s
     return ss_edit
 
+def run_get_similarity_score(arg_list):
+    score_results = []
+    for arg in arg_list:
+        results = get_similarity_score(arg)
+        score_results.append(results)
+    return score_results 
+
 def get_similarity_score(arg_list):
     name_1, name_2, ss_1, ss_2 = arg_list
     name_combination = name_1 + "\t" + name_2
@@ -104,6 +111,7 @@ parser.add_argument("-f", "--path_list_file", required=True, help="A text file c
 parser.add_argument("-a", "--fuzzy", required=False, help="Use fuzzy option (True, False)", choices=[True, False], default=False, type=bool)
 parser.add_argument("-o", "--output_base_name", required = False, default = "test", help="Output file base name containing alignment score results", type=str)
 parser.add_argument("-c", "--cores", required = False, default = 10, help="Cores inputs the number of cores to use when using multiprocessing", type=int)
+parser.add_argument("-p", "--mp", required = False, help="option to run multiprocessing", choices=[True, False], default=False, type=bool)
 args = parser.parse_args()
 
 # Asign variables from input arguments
@@ -111,6 +119,7 @@ file_paths = args.path_list_file
 use_fuzzy = args.fuzzy
 name = args.output_base_name
 n_cores = args.cores
+multiprocessing = args.mp
 # Function calls
 if use_fuzzy:
     kmer_edit_dist_file = "kmer_pc_dict_max_dist_2.npy"
@@ -125,5 +134,8 @@ paths = get_paths(file_paths)
 output_file_name = name + "_bpRNA_CosMoS_scores.txt"
 strct_dict = get_structure_dict(paths)
 arg_list = get_arg_list(strct_dict)
-score_results = multi_process(arg_list, get_similarity_score, n_cores)  
+if multiprocessing:
+    score_results = multi_process(arg_list, get_similarity_score, n_cores)  
+else:
+    score_results = run_get_similarity_score(arg_list)
 write_files(output_file_name, score_results)
