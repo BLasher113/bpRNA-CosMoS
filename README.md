@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # bpRNA-CosMoS
-=======
+
 # bpRNA-CosMoS
 bpRNA-CosMoS is a novel RNA secondary structure comparison method involving a k-mer based, length weighted cosine similarity approach. This method uses the bpRNA structure array as an input, which provides a feature rich structural representation. This k-mer based approach achieves low time-complexity, which enables fast application for large data sets. 
 
