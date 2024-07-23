@@ -14,11 +14,11 @@ This module performs the comparison task, once the files are processed and the k
 This module includes the a length weighted cosine similarity score and the optional pseudo counts for scoring.
 
 ## Example of running bpRNA-CosMoS:
-###1)
+### 1)
 
+python3 scripts/bpRNA_CosMoS.py -f test_RNA_paths.txt -a True
 
-
-###2)
+### 2)
 
 An example run file for bpRNA-align is available, "run_bpRNA_CosMoS.sh", and can be run using the following command: "bash run_bpRNA_CosMoS.sh"
 
