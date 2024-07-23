@@ -14,13 +14,9 @@ This module performs the comparison task, once the files are processed and the k
 This module includes the a length weighted cosine similarity score and the optional pseudo counts for scoring.
 
 ## Example of running bpRNA-CosMoS:
-### 1)
+#### 1)  python3 scripts/bpRNA_CosMoS.py -f test_RNA_paths.txt -a True
 
-python3 scripts/bpRNA_CosMoS.py -f test_RNA_paths.txt -a True
-
-### 2)
-
-An example run file for bpRNA-align is available, "run_bpRNA_CosMoS.sh", and can be run using the following command: "bash run_bpRNA_CosMoS.sh"
+#### 2)  An example run file for bpRNA-align is available, "run_bpRNA_CosMoS.sh", and can be run using the following command: "bash run_bpRNA_CosMoS.sh"
 
 ## Acknowledgements: 
 This comparison method utilizes bpRNA structure arrays as the input. These can be generated using the bpRNA method/tool developed previously: [bpRNA: large-scale automated annotation and analysis of RNA secondary structure](https://academic.oup.com/nar/article/46/11/5381/4994207). The bpRNA_CosMoS.py script makes use of the bpRNA tool to convert .dbn to .st files. For more information about bpRNA, check out the [github repository](https://github.com/hendrixlab/bpRNA).
