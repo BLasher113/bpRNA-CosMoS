@@ -1,6 +1,8 @@
 # bpRNA-CosMoS
 bpRNA-CosMoS is a novel RNA secondary structure comparison method involving a k-mer based, length weighted cosine similarity approach. This method uses the bpRNA structure array as an input, which provides a feature rich structural representation. This k-mer based approach achieves low time-complexity, which enables fast application for large data sets. 
 
+<img src="./Figure1_final.png" width="428"/>
+
 ## bpRNA-CosMoS scripts
 bpRNA_CosMoS has two python scripts, one that processes the input file (a file containing paths to RNA .dbn or .st files) and generates the output score file (bpRNA_CosMoS.py), and one that performs the comparison method (bpRNA_CosMoS_module.py). Th
 
@@ -9,9 +11,12 @@ This script takes one required input and has multiple flag options and outputs t
 
 ## bpRNA_CosMoS_module.py: 
 This module performs the comparison task, once the files are processed and the key information is retrieved. 
-This module includes the a length weighted cosine similarity score and the optional pseudo counts for scoring. 
+This module includes the a length weighted cosine similarity score and the optional pseudo counts for scoring.
 
-An example run file for bpRNA-align is available, "run_bpRNA_CosMoS.sh", and can be run using the following command: "bash run_bpRNA_CosMoS.sh"
+## Example of running bpRNA-CosMoS:
+#### 1)  python3 scripts/bpRNA_CosMoS.py -f test_RNA_paths.txt -a True
+
+#### 2)  An example run file for bpRNA-align is available, "run_bpRNA_CosMoS.sh", and can be run using the following command: "bash run_bpRNA_CosMoS.sh"
 
 ## Acknowledgements: 
 This comparison method utilizes bpRNA structure arrays as the input. These can be generated using the bpRNA method/tool developed previously: [bpRNA: large-scale automated annotation and analysis of RNA secondary structure](https://academic.oup.com/nar/article/46/11/5381/4994207). The bpRNA_CosMoS.py script makes use of the bpRNA tool to convert .dbn to .st files. For more information about bpRNA, check out the [github repository](https://github.com/hendrixlab/bpRNA).
